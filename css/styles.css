@@ -1,0 +1,44 @@
+
+.tft >table{
+    border-spacing:0px;
+    /* position:relative;         */
+    /* left:25%; */
+    /* top:4%; */
+    /* width:60%; */
+}
+.tft > table td{
+    height:2px;
+    width:2px
+}
+
+.container{
+    display:grid;
+    min-height:100vh;
+    gap:1em;
+    grid-template-areas:     
+    'tft output'
+    'controls controls';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+@media screen and (max-width: 700px){
+    .container{
+        display:block;
+    }
+}
+.tft{grid-area:tft;}
+.controlpanel{grid-area:controls;}
+.ouput{grid-area:output}
+.controlpanel{
+    min-height:200px;
+    box-shadow: 5px 5px 5px;
+    margin: 5px 0px 10px 0px;
+    background-color: darkgrey;
+}
+.output{
+    min-height:300px;
+    box-shadow: 5px 5px 5px;
+    margin: 5px 0px 10px 0px;
+    background-color: rgb(244, 245, 225);
+    height:100%;
+}
